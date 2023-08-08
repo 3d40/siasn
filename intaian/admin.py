@@ -13,3 +13,4 @@ class ItemAdmin(admin.ModelAdmin):
         
 admin.site.register(ModelRwgolongan)
 admin.site.register(Datautama)
+admin.site.register(ModelRwPendidikan)

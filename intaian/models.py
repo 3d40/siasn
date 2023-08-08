@@ -223,3 +223,29 @@ class ModelPasangan(models.Model):
     class Meta:
         managed = False
         db_table = 'Pasangan'
+
+class ModelRwPendidikan(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False) 
+    idsiasn = models.TextField(db_column='idsiasn', blank=True, null=True)
+    idpns = models.ForeignKey('Datautama', on_delete=models.DO_NOTHING)  # Field name made lowercase.
+    nipbaru = models.TextField(db_column='nipBaru', blank=True, null=True)  # Field name made lowercase.
+    niplama = models.TextField(db_column='nipLama', blank=True, null=True)  # Field name made lowercase.
+    pendidikanid = models.TextField(db_column='pendidikanId', blank=True, null=True)  # Field name made lowercase.
+    pendidikannama = models.TextField(db_column='pendidikanNama', blank=True, null=True)  # Field name made lowercase.
+    tkpendidikanid = models.IntegerField(db_column='tkPendidikanId', blank=True, null=True)  # Field name made lowercase.
+    tkpendidikannama = models.TextField(db_column='tkPendidikanNama', blank=True, null=True)  # Field name made lowercase.
+    tahunlulus = models.IntegerField(db_column='tahunLulus', blank=True, null=True)  # Field name made lowercase.
+    tgllulus = models.TextField(db_column='tglLulus', blank=True, null=True)  # Field name made lowercase.
+    ispendidikanpertama = models.IntegerField(db_column='isPendidikanPertama', blank=True, null=True)  # Field name made lowercase.
+    nomorijasah = models.TextField(db_column='nomorIjasah', blank=True, null=True)  # Field name made lowercase.
+    namasekolah = models.TextField(db_column='namaSekolah', blank=True, null=True)  # Field name made lowercase.
+    gelardepan = models.TextField(db_column='gelarDepan', blank=True, null=True)  # Field name made lowercase.
+    gelarbelakang = models.TextField(db_column='gelarBelakang', blank=True, null=True)  # Field name made lowercase.
+    path = models.TextField(blank=True, null=True)
+    
+    def __str__(self):
+        return str(self.idpns)
+
+    class Meta:
+        managed = False
+        db_table = 'RwPendidikan'

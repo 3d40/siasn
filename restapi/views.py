@@ -18,3 +18,9 @@ class apiPasangan(viewsets.ReadOnlyModelViewSet):
     serializer_class = pasanganSerializer
     filter_backends = [SearchFilter]
     search_fields = ['idsiasn','nama']
+    
+class apiRwPangkat(viewsets.ReadOnlyModelViewSet):
+    queryset = ModelRwgolongan.objects.all()
+    serializer_class = rwPangkatSerializer
+    filter_backends = [SearchFilter]
+    search_fields = ['data_nipbaru']

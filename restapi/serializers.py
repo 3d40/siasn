@@ -34,3 +34,12 @@ class pasanganSerializer(serializers.ModelSerializer):
                   'datapernikahan_posisi', 'datapernikahan_status', 'datapernikahan_ispns', 'datapernikahan_noskpensiun'
         ]
 
+
+class rwPangkatSerializer(serializers.ModelSerializer):
+    class Meta :
+        model = ModelRwgolongan
+        fields = ['id', 'code', 'data_idsiasn', 'data_idpns', 'data_nipbaru', 'data_niplama', 'data_golonganid', 'data_golongan', 'data_sknomor', 'data_sktanggal', 
+                  'data_tmtgolongan', 'data_nopertekbkn', 'data_tglpertekbkn', 'data_jumlahkreditutama', 'data_jumlahkredittambahan', 'data_jeniskpid', 
+                  'data_jeniskpnama', 'data_masakerjagolongantahun', 'data_masakerjagolonganbulan', 'data_path_858_dok_id', 'data_path_858_dok_nama', 
+                  'data_path_858_dok_uri', 'data_path_858_object', 'data_path_858_slug', 'data_path']
+        

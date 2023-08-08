@@ -20,7 +20,9 @@ app_name = 'intaian'
 urlpatterns = [
     path('token/pertama', views.ViewAuth, name='tokenpertama'),
     path('token/kedua', views.ViewAuthorization, name='tokenkedua'),
-    path('data', views.get_data, name='datautama'),
-    path('rwgolongan', views.get_rwgolongan, name='rwgolongan'),
-    path('pasangan', views.get_pasangan, name='pasangan'),
+    path('data/<str:nip>', views.get_data, name='datautama'),
+    path('rwgolongan/<str:nip>', views.get_rwgolongan, name='rwgolongan'),
+    path('pasangan/<str:nip>', views.get_pasangan, name='pasangan'),
+    path('rwpendidikan/<str:nip>', views.get_pendidikan, name='rwpendidikan'),
+    # path('coba/<str:nip>', views.coba, name='coba')
 ]

@@ -20,6 +20,7 @@ from .views import *
 router = routers.DefaultRouter()
 router.register('data',apiDataUtama)
 router.register('pasangan',apiPasangan)
+router.register('rwgolongan',apiRwPangkat)
 app_name = 'restapi'
 urlpatterns = [
     path('',include(router.urls)),
